@@ -7,7 +7,7 @@
        "native": "./native",
        "shared": "./shared"
      }
-   }]
+    }]
   ],
   "env": {
     "development": {
