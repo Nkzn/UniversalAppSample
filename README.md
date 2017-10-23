@@ -14,6 +14,33 @@ A Native + Web Application on React Native.
 * [ ] Multiscreen (smartphone & tablet)
 * [ ] HMR & Live Reload survival
 
+Usage
+----------
+
+this project uses `yarn`.
+
+### setup
+
+```
+$ yarn
+```
+
+### RN bundler start
+
+```
+$ yarn start
+```
+
+and run ios app with standard way.
+
+### RNW webpack bundler start
+
+```
+$ yarn start:web
+```
+
+and open `localhost:5555` with your browser.
+
 Inspired by
 ----------
 
