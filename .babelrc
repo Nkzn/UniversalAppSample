@@ -1,3 +1,17 @@
 {
-  "presets": ["react-native"]
+  "presets": ["react-native"],
+  "plugins": [
+    ["module-resolver", {
+     "root": ["./src"],
+     "alias": {
+       "native": "./native",
+       "shared": "./shared"
+     }
+   }]
+  ],
+  "env": {
+    "development": {
+      "plugins": ["transform-react-jsx-source"]
+    }
+  }
 }
