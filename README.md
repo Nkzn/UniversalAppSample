@@ -10,6 +10,7 @@ A Native + Web Application on React Native.
 * [ ] android runnable
 * [x] shared directory
 * [ ] Redux
+* [ ] TypeScript
 * [ ] router (React Navigation or React Router v4)
 * [ ] Multiscreen (smartphone & tablet)
 * [ ] HMR & Live Reload survival
