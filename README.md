@@ -5,7 +5,7 @@ A Native + Web Application on React Native.
 
 ### TODO
 
-* [x] web runnable
+* [x] web runnable (with [React Native for Web](https://github.com/necolas/react-native-web))
 * [x] ios runnable
 * [x] android runnable
 * [x] shared directory
