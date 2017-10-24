@@ -32,7 +32,7 @@ $ yarn
 $ yarn start
 ```
 
-and run ios app with standard way.
+and run ios or android app with standard way.
 
 ### RNW webpack bundler start
 
