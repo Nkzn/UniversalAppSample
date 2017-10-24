@@ -4,9 +4,9 @@ import {
   Text,
   View
 } from 'react-native';
-import InstructionsText from "shared/components/InstructionsText";
+import InstructionsText from "./InstructionsText";
 
-export default class App extends Component<{}> {
+export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
