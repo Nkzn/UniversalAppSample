@@ -14,7 +14,7 @@ const instructions = Platform.select({
   web: 'Press Cmd + R to reload,\nOpt + Cmd + I for devtools',
 });
 
-export default function(props: {}) {
+export default (props: {}) => {
   return (
     <View>
       <Text style={styles.instructions}>
