@@ -11,7 +11,7 @@ A Native + Web Application on React Native.
 * [x] shared directory
 * [ ] [Redux](http://redux.js.org/)
 * [x] [TypeScript](https://www.typescriptlang.org/)
-* [ ] [Storybook](https://storybook.js.org/)
+* [x] [Storybook](https://storybook.js.org/)
 * [ ] navigation ([React Navigation](https://reactnavigation.org/) or [React Router](https://reacttraining.com/react-router/))
 * [ ] Multiscreen (smartphone & tablet)
 * [ ] HMR & Live Reload survival
