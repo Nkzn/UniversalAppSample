@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "strictNullChecks": true,
+    "noUnusedLocals" : true, // 本当は付けたいけどStateless Componentと相性悪い
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "outDir": "./dist",
+    "rootDirs": [
+      "./src",
+      "__tests__"
+    ],
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "lib": ["dom", "es2017"],
+    "module": "ES2015",
+    "moduleResolution": "node",
+    "target": "es6",
+    "jsx": "react",
+    "typeRoots": [
+      "node_modules/@types", "typings"
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "native/*": ["src/native/*"],
+      "shared/*": ["src/shared/*"]
+    }
+  }
+}

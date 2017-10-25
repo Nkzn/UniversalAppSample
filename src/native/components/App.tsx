@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import * as React from 'react';
+import { Component } from 'react'
 import {
   StyleSheet,
   Text,
@@ -6,7 +7,7 @@ import {
 } from 'react-native';
 import InstructionsText from "./InstructionsText";
 
-export default class App extends Component {
+export default class App extends Component<object, object> {
   render() {
     return (
       <View style={styles.container}>

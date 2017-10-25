@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {
   Platform,
   StyleSheet,
@@ -14,7 +14,7 @@ const instructions = Platform.select({
   web: 'Press Cmd + R to reload,\nOpt + Cmd + I for devtools',
 });
 
-export default function(props) {
+export default function(props: {}) {
   return (
     <View>
       <Text style={styles.instructions}>
