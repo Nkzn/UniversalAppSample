@@ -54,3 +54,4 @@ buck-out/
 
 # TypeScript export
 dist/
+src/web/public/bundle.js

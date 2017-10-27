@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start:web": "webpack-dev-server --config src/web/webpack.config.js",
+    "build:web": "webpack --config src/web/webpack.config.js",
     "start:tsc": "tsc -w -p .",
     "build:tsc": "tsc -p .",
     "start": "node node_modules/react-native/local-cli/cli.js start",

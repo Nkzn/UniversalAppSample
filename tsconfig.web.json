@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "strictNullChecks": true,
+    "noUnusedLocals" : true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "lib": ["dom", "es2017"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es5",
+    "jsx": "react",
+    "typeRoots": [
+      "node_modules/@types", "typings"
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "native/*": ["src/native/*"],
+      "shared/*": ["src/shared/*"]
+    }
+  },
+  "exclude": [
+    "./public"
+  ]
+}
