@@ -18,9 +18,15 @@ module.exports = (baseConfig, env) => {
 
   // For example, add typescript loader:
   config.module.rules.push({
-    test: /\.(ts|tsx)$/,
-    include: path.resolve(__dirname, '../src'),
-    loader: require.resolve('ts-loader')
+    test: /\.tsx?$/,
+    use: [
+      {
+        loader: 'ts-loader', 
+        options: {
+          configFile: "tsconfig.web.json"
+        }
+      }
+    ]
   });
   config.resolve.extensions.push('.ts', '.tsx');
 

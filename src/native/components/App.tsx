@@ -1,35 +1,18 @@
 import * as React from 'react';
 import { Component } from 'react'
-import {
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
-import InstructionsText from "./InstructionsText";
+import { StackNavigator } from 'react-navigation';
+import TodoScreen from '../containers/TodoScreen';
+
+const Navigator = StackNavigator({
+  TodoScreen: {
+    screen: TodoScreen
+  }
+});
 
 export default class App extends Component<object, object> {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <InstructionsText />
-      </View>
+      <Navigator />
     );
   }
 }
-
-const styles = StyleSheet.create({
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-});
