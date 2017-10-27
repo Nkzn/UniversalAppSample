@@ -1,1 +1,1 @@
-import "./dist/src/native";
+import "./dist/native";

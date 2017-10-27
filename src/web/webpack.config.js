@@ -16,15 +16,17 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        use: 'babel-loader',
-        exclude: /node_modules/,
+        test: /\.tsx?$/,
+        use: 'ts-loader',
       }
     ]
   },
   resolve: {
+    extensions: ['.ts', '.tsx', '.js'],
     alias: {
-      'react-native': 'react-native-web'
+      'react-native': 'react-native-web',
+      'native': path.resolve(__dirname, '../native'),
+      'shared': path.resolve(__dirname, '../shared')
     }
   }
 }

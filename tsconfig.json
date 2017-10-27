@@ -6,17 +6,13 @@
     "noImplicitThis": true,
     "alwaysStrict": true,
     "outDir": "./dist",
-    "rootDirs": [
-      "./src",
-      "__tests__"
-    ],
     "sourceMap": true,
     "noImplicitAny": true,
     "lib": ["dom", "es2017"],
     "module": "ES2015",
     "moduleResolution": "node",
-    "target": "es6",
-    "jsx": "react",
+    "target": "ES2017",
+    "jsx": "react-native",
     "typeRoots": [
       "node_modules/@types", "typings"
     ],
@@ -25,5 +21,14 @@
       "native/*": ["src/native/*"],
       "shared/*": ["src/shared/*"]
     }
-  }
+  },
+  "include": [
+    "src/native/**/*",
+    "src/shared/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "stories"
+  ]
 }

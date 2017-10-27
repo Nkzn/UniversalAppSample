@@ -27,21 +27,28 @@ this project uses `yarn`.
 $ yarn
 ```
 
-### RN bundler start
+### RN development
 
 ```
+$ yarn start:tsc
 $ yarn start
 ```
 
 and run ios or android app with standard way.
 
-### RNW webpack bundler start
+### RNW development
 
 ```
 $ yarn start:web
 ```
 
 and open `localhost:5555` with your browser.
+
+### Storyboard development
+
+```
+$ yarn storybook
+```
 
 Inspired by
 ----------
