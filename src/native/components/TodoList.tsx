@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
 const TodoList = (props: Props) => {
 
   const todoTexts = props.todos.map(todo => (
-      <TouchableOpacity onPress={() => props.onPressTodo(todo.id)}>
+      <TouchableOpacity key={todo.id} onPress={() => props.onPressTodo(todo.id)}>
         <View key={todo.id} style={styles.todoListItem}>
           <Text>{todo.title}</Text>
         </View>

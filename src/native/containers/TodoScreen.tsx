@@ -1,51 +1,61 @@
 import * as React from 'react';
 import {
-  StyleSheet,
-  View,
   Dimensions
 } from 'react-native';
 import TodoList from '../components/TodoList';
 import TodoDetail from '../components/TodoDetail';
+import TodoScreen from '../components/TodoScreen';
+import Pane, { PaneMode } from '../utils/Pane';
+import Screen from '../utils/Screen';
 
-export default class TodoScreen extends React.PureComponent<object, object> {
+import { Todo } from 'shared/models';
 
-  state = {
-    index: 0
+export interface Props {
+  todos: Todo[],
+  todo: Todo,
+  onPressTodo: (id: number) => void;
+}
+
+interface State {
+  paneMode: PaneMode
+}
+
+export default class extends React.PureComponent<Props, State> {
+
+  static navigationOptions = {
+    header: null
+  };
+
+  constructor(props: Props) {
+    super(props);
+
+    this.state = {
+      paneMode: new Pane(new Screen()).getPaneMode()
+    };
+
+    Dimensions.addEventListener("change", () => {
+      this.setState({ paneMode: new Pane(new Screen()).getPaneMode() });
+    });
+  }
+
+  private onPressTodo(id: number) {
+    // TODO call usecase
   }
 
   render() {
-
+    // const { todos, todo } = this.props;
     const todos = [
-        {id: 0, title: "hogehoge", description: "ほげほげ"},
-        {id: 1, title: "fugafuga", description: "ふがふが"},
-        {id: 2, title: "piyopiyo", description: "ぴよぴよ"}
+        {id: 1, title: "hogehoge", description: "ほげほげ"},
+        {id: 2, title: "fugafuga", description: "ふがふが"},
+        {id: 3, title: "piyopiyo", description: "ぴよぴよ"}
     ];
+    const todo = todos[0];
 
     return (
-      <View style={styles.container}>
-        <View style={styles.menuColumn}>
-          <TodoList todos={todos} onPressTodo={id => this.setState({index: id})} />
-        </View>
-        <View style={styles.contentColumn}>
-          <TodoDetail todo={todos[this.state.index]} />
-        </View>
-      </View>
+      <TodoScreen
+        paneMode={this.state.paneMode}
+        left={<TodoList todos={todos} onPressTodo={id => this.onPressTodo(id)} />}
+        right={<TodoDetail todo={todo} />} />
     );
   }
 }
-
-const screenHeight = Dimensions.get("window").height;
-
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      flexDirection: 'row',
-      height: screenHeight,
-    },
-    menuColumn: {
-      width: 300,
-    },
-    contentColumn: {
-      flex: 1,
-    }
-  });
