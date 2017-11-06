@@ -11,7 +11,7 @@ import { PhonePortrait, PhoneLandscape, Tab7Portrait, Tab7Landscape, Tab9Portrai
 
 import TodoList from '../src/native/components/TodoList';
 import TodoDetail from '../src/native/components/TodoDetail';
-import TodoScreenLayout from '../src/native/components/TodoScreenLayout';
+import TodoScreen from '../src/native/components/TodoScreen';
 
 storiesOf('Todo', module)
   .add('TodoList', () => (
@@ -26,31 +26,28 @@ storiesOf('Todo', module)
   ))
   .add('TodoDetail', () => (
     <TodoDetail todo={{id: 0, title: "hogehoge", description: "ほげほげ"}} />
-  ))
-  .add('TodoScreen', () => (
-    <TodoScreenLayout />
   ));
 
 storiesOf('TodoLayout MultiScreen')
   .add('Phone Portrait (with id)', () => (
     <PhonePortrait>
-      <TodoScreenLayout
-        navigation={{state: { params: { id: 1 }}}}
+      <TodoScreen
+        todoId="1"
         left={<View style={{ flex: 1, backgroundColor: '#00F' }} />}
         right={<View style={{ flex: 1, backgroundColor: '#F00' }} />}/>
     </PhonePortrait>
   ))
-  .add('Phone Portrait (no id)', () => (
+  .add('Phone Portrait (all)', () => (
     <PhonePortrait>
-      <TodoScreenLayout
-        navigation={{state: { params: { }}}}
+      <TodoScreen
+        todoId="all"
         left={<View style={{ flex: 1, backgroundColor: '#00F' }} />}
         right={<View style={{ flex: 1, backgroundColor: '#F00' }} />}/>
     </PhonePortrait>
   ))
   .add('Phone Landscape', () => (
     <PhoneLandscape>
-      <TodoScreenLayout
+      <TodoScreen
         navigation={{state: { params: { }}}}
         left={<View style={{ flex: 1, backgroundColor: '#00F' }} />}
         right={<View style={{ flex: 1, backgroundColor: '#F00' }} />}/>
@@ -58,7 +55,7 @@ storiesOf('TodoLayout MultiScreen')
   ))
   .add('Tab 7 inch Portrait', () => (
     <Tab7Portrait>
-      <TodoScreenLayout
+      <TodoScreen
         navigation={{state: { params: { }}}}
         left={<View style={{ flex: 1, backgroundColor: '#00F' }} />}
         right={<View style={{ flex: 1, backgroundColor: '#F00' }} />}/>
@@ -66,7 +63,7 @@ storiesOf('TodoLayout MultiScreen')
   ))
   .add('Tab 7 inch Landscape', () => (
     <Tab7Landscape>
-      <TodoScreenLayout
+      <TodoScreen
         navigation={{state: { params: { }}}}
         left={<View style={{ flex: 1, backgroundColor: '#00F' }} />}
         right={<View style={{ flex: 1, backgroundColor: '#F00' }} />}/>
@@ -74,7 +71,7 @@ storiesOf('TodoLayout MultiScreen')
   ))
   .add('Tab 9 inch Portrait', () => (
     <Tab9Portrait>
-      <TodoScreenLayout
+      <TodoScreen
         navigation={{state: { params: { }}}}
         left={<View style={{ flex: 1, backgroundColor: '#00F' }} />}
         right={<View style={{ flex: 1, backgroundColor: '#F00' }} />}/>
@@ -82,7 +79,7 @@ storiesOf('TodoLayout MultiScreen')
   ))
   .add('Tab 9 inch Landscape', () => (
     <Tab9Landscape>
-      <TodoScreenLayout
+      <TodoScreen
         navigation={{state: { params: { }}}}
         left={<View style={{ flex: 1, backgroundColor: '#00F' }} />}
         right={<View style={{ flex: 1, backgroundColor: '#F00' }} />}/>
@@ -90,7 +87,7 @@ storiesOf('TodoLayout MultiScreen')
   ))
   .add('Tab 10 inch Portrait', () => (
     <Tab10Portrait>
-      <TodoScreenLayout
+      <TodoScreen
         navigation={{state: { params: { }}}}
         left={<View style={{ flex: 1, backgroundColor: '#00F' }} />}
         right={<View style={{ flex: 1, backgroundColor: '#F00' }} />}/>
@@ -98,7 +95,7 @@ storiesOf('TodoLayout MultiScreen')
   ))
   .add('Tab 10 inch Landscape', () => (
     <Tab10Landscape>
-      <TodoScreenLayout
+      <TodoScreen
         navigation={{state: { params: { }}}}
         left={<View style={{ flex: 1, backgroundColor: '#00F' }} />}
         right={<View style={{ flex: 1, backgroundColor: '#F00' }} />}/>
