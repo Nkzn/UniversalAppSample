@@ -1,18 +1,18 @@
 import * as React from 'react';
 import { Component } from 'react'
-import { StackNavigator } from 'react-navigation';
-import TodoScreen from '../containers/TodoScreen';
+import { Provider } from 'react-redux';
+import rootReducer from '../../shared/ducks';
+import configureStore from '../../shared/store';
+import AppNavigatorWithState from "../navigators";
 
-const Navigator = StackNavigator({
-  TodoScreen: {
-    screen: TodoScreen
-  }
-});
+const store = configureStore(rootReducer);
 
 export default class App extends Component<object, object> {
   render() {
     return (
-      <Navigator />
+      <Provider store={store}>
+        <AppNavigatorWithState />
+      </Provider>
     );
   }
 }

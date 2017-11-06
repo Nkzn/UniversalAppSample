@@ -7,7 +7,7 @@ import Screen from '../utils/Screen';
 import { PaneMode } from '../utils/Pane';
 
 interface Props {
-  todoId?: number;
+  todoId?: string;
   paneMode: PaneMode;
   left: React.ReactElement<any>;
   right: React.ReactElement<any>;
@@ -18,16 +18,18 @@ export default class TodoScreen extends React.PureComponent<Props, object> {
   private renderSinglePane() {
     const { todoId } = this.props;
 
-    if (todoId) {
+    console.log(`todoId: ${todoId}`);
+
+    if (todoId === 'all') {
       return (
         <View style={styles.contentPane}>
-          {React.cloneElement(this.props.right, { todoId: todoId })}
+          {this.props.left}
         </View>
       );
     } else {
       return (
         <View style={styles.contentPane}>
-          {this.props.left}
+          {React.cloneElement(this.props.right, { todoId: todoId })}
         </View>
       );
     }

@@ -9,7 +9,7 @@ import { Todo } from 'shared/models';
 
 export interface Props {
   todos: Todo[],
-  onPressTodo: (id: number) => void;
+  onPressTodo: (id: string) => void;
 }
 
 const styles = StyleSheet.create({
