@@ -13,6 +13,17 @@ import TodoList from '../src/native/components/TodoList';
 import TodoDetail from '../src/native/components/TodoDetail';
 import TodoScreen from '../src/native/components/TodoScreen';
 
+import ActivityIndicatorSample from "./playground/ActivityIndicatorSample";
+
+storiesOf('Playground', module)
+  .add('ActivityIndicator', () => {
+    return (
+      <PhonePortrait>
+        <ActivityIndicatorSample />
+      </PhonePortrait>
+    );
+  });
+
 storiesOf('Todo', module)
   .add('TodoList', () => (
     <TodoList
